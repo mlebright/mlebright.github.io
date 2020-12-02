@@ -1,0 +1,1337 @@
+<!doctype html>
+<html>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <head>
+    <title>Pander-Toe</title>
+ 
+
+   
+    <style>
+/*@import url('https://fonts.googleapis.com/css?family=Cardo|Work+Sans&display=swap');*/
+
+:root {
+  --coral: #221F1F;
+  --jade:  white;
+}
+body {
+  background: var(--jade);
+  margin: 0;
+  padding: 20px;
+  color: var(--coral);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1em 3em;
+  
+}
+
+/* TYPE */
+.sans {
+  font-family: 'IBM Plex Serif', serif; 
+}
+
+.serif {
+  font-family: 'IBM Plex Mono', monospace;
+   
+}
+
+.centre {
+  text-align: center;
+}
+
+.title {
+  font-size: 10em;
+  line-height: 90%;
+  margin: 40px 0;
+}
+
+.summary {
+  font-size: 1.5em;
+  line-height: 1.35;
+}
+
+.accent {
+  font-size: 2.5em;
+  line-height: 120%;
+  margin: 20px 0;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.fine-print {
+  font-size: 14px;
+}
+/*LINES*/
+
+/*.line-btm {
+  border-bottom: 1px solid var(--coral);
+  width: 100%;
+  padding: 10px 0;
+}
+
+.line-left {
+  border-left: 1px solid var(--coral);
+  padding: 0 10px;
+}*/
+
+/* IMAGES */
+.placeholder {
+ /* border: 1px solid var(--coral);*/
+  padding: 10px;
+  text-align: center;
+  min-height: 300px;
+}
+
+/* GRID */
+.span-all {
+  grid-column: span 12;
+}
+
+.span-third {
+  grid-column: span 4;
+}
+
+.span-fourth {
+  grid-column: span 3;
+}
+
+.span-half {
+  grid-column: span 6;
+}
+
+.span-twothirds {
+  grid-column: span 6;
+}
+
+.span-threefourths {
+  grid-column: span 9;
+}
+
+:root {
+  --border-size: 0.125rem;
+  --duration: 250ms;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  font-family: 'IBM Plex Mono', monospace;
+  --color-primary: black;
+  --color-secondary: white;
+  --color-tertiary: dodgerblue;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --space: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.multi-button {
+  display: flex;
+  width: 100%;
+  box-shadow: var(--shadow) 4px 4px;
+}
+
+.multi-button button {
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  padding:
+    calc(var(--space) / 1.125)
+    var(--space)
+    var(--space);
+  border: var(--border-size) solid black;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  font-size: 1.5rem;
+
+  text-transform: lowercase;
+  text-shadow: var(--shadow) 2px 2px;
+  transition: flex-grow var(--duration) var(--ease);
+}
+
+.multi-button button + button {
+  border-left: var(--border-size) solid black;
+  margin-left: calc(var(--border-size) * -1);
+}
+
+.multi-button button:hover,
+.multi-button button:focus {
+  flex-grow: 2;
+  color: black;
+  outline: none;
+  text-shadow: none;
+  background-color: var(--color-secondary);
+}
+
+.multi-button button:focus {
+  /*outline: var(--border-size) dashed var(--color-primary);*/
+  outline-offset: calc(var(--border-size) * -3);
+}
+
+.multi-button:hover button:focus:not(:hover) {
+  flex-grow: 1;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  outline-color: var(--color-tertiary);
+}
+
+.multi-button button:active {
+  transform: translateY(var(--border-size));
+}
+
+#input { 
+
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+
+#output {
+
+  width:  32.5%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  }
+
+  #input2 { 
+
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+
+#output2 {
+
+  width:  32.5%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  }
+
+  #input3 { 
+
+  width: 133%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+
+#output3 {
+
+  width:  32.5%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  }
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.list li {
+  flex: 1;
+}
+.list li a {
+  text-decoration: none;
+  color: inherit;
+  padding-top: 1rem;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  font-size: 40px;
+}
+.list li a span {
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  font-size: 22px;
+  margin-top: 1rem;
+}
+
+@media (hover: hover) {
+  .list li a span {
+    transform: translateY(100px);
+    transition: 0.2s;
+  }
+  .list:hover span {
+    transform: translateY(0);
+  }
+  .list li:nth-child(1) span {
+    transition-delay: 0.0s;
+  }
+  .list li:nth-child(2) span {
+    transition-delay: 0.05s;
+  }
+  .list li:nth-child(3) span {
+    transition-delay: 0.1s;
+  }
+  .list li:nth-child(4) span {
+    transition-delay: 0.15s;
+  }
+  .list li:nth-child(5) span {
+    transition-delay: 0.2s;
+  }
+  .list li:nth-child(6) span {
+    transition-delay: 0.25s;
+  }
+}
+
+/*@import url("https://fonts.googleapis.com/css?family=Lato|Pacifico");*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  color: #252525;
+  background: 
+    linear-gradient(to bottom right, #F1F1EE 0%, #A7A694 10%, transparent 10%), 
+    linear-gradient(to bottom left, #F1F1EE 0%, #A7A694 10%, transparent 10%), 
+    linear-gradient(to top right, #F1F1EE 0%, #A7A694 10%, transparent 10%), 
+    linear-gradient(to top left, #F1F1EE 0%, #A7A694 10%, transparent 10%), 
+    #A7A694;
+}*/
+
+.container {
+  max-width: 650px;
+  margin: 2rem auto;  
+}
+.container h1 {
+  text-align: center;
+}
+.container h1 sub {
+  font-size: 1rem;
+}
+.container p {
+  font-size: 1.4rem;
+  /* increase the line-height to accommodate for the vertically positioned sup and sub elements */
+  line-height: 2;
+  margin: 1rem;
+}
+.container p:first-letter {
+  /* style the first letter of every paragraph to be larger and cursive */
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2rem;
+}
+.container span.choice {
+  font-size: 1.4rem;
+  margin: 0 0.3rem;
+}
+.container p sub, .container p sup {
+  font-style: italic;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #838C7B;
+  transition: all 0.2s ease-out;
+  /* position relative to separate a little more the elements from each other, vertically */
+  position: relative;
+}
+.container p sup {
+  bottom: 10px;
+}
+.container p sub {
+  top: 10px;
+}
+.container p sub:hover, .container p sup:hover {
+  /* on hover change the color of the backround to match the color of the border */
+  background: #838C7B;
+}
+
+ #as {
+     color: #221F1F;
+     font-size:72px;
+      line-height: -100px;
+     /* width: 18vw;*/
+          }
+
+   #as:hover {
+            /*color: #6063AD;
+            text-shadow: 1px 1px 20px #DBE120;*/
+            font-family: 'IBM Plex Serif', serif;
+          }
+
+          #l1 {
+            /* position: absolute; */
+            color: #221F1F;
+           
+          }
+          #l2 {
+            /* position: absolute; */
+            color: #6063AD;
+            /*font-size: 100px;*/
+          }
+          #l3 {
+            /* position: absolute; */
+            color: white;
+            /*font-size: 100px;*/
+          }
+           #l4 {
+            /* position: absolute; */
+            color: white;AD;
+            /*font-size: 100px;*/
+          }
+          #l5 {
+            /* position: absolute; */
+            color: white;
+            
+          }
+          #l6 {
+            /* position: absolute; */
+            color: white;;
+            
+          }
+          #l7 {
+            /* position: absolute; */
+            color: white;
+            
+          }
+          #l8 {
+            /* position: absolute; */
+            color: white;
+            
+          }
+          #l9 {
+            /* position: absolute; */
+            color: white;;
+            
+          }
+           #l10 {
+            /* position: absolute; */
+            color: white;
+            
+          }
+          #l11 {
+            /* position: absolute; */
+            color: white;
+           
+          }
+          #l12 {
+            /* position: absolute; */
+            color: white;
+           
+          }
+          #l13 {
+            /* position: absolute; */
+            color: white;
+            
+          }
+          #l14 {
+            /* position: absolute; */
+            color: white;
+            
+          }
+          #l15 {
+            /* position: absolute; */
+            color: white;
+            
+          }
+            #l16 {
+            /* position: absolute; */
+            color: white;
+            
+          }
+          #l17 {
+            /* position: absolute; */
+            color: white;
+           
+          }
+          #l18 {
+            /* position: absolute; */
+            color: white;
+          
+          }
+          #l19 {
+            /* position: absolute; */
+            color: white;
+            
+          }
+          #l20 {
+            /* position: absolute; */
+            color: white;
+            
+          }
+               #l21 {
+            /* position: absolute; */
+            color: white;
+            
+          }
+
+      #quick {
+            background-color: #221F1F;
+            /* line-height: 12px; */
+            color: white;
+            width: 18vw;
+          }
+
+      #quick:hover{
+      letter-spacing: 50px;
+      line-height: -10px;
+      width: 18vw;
+      background-color: lightgrey;
+     /* text-shadow: 2px 2px 0px #F15A2A;*/
+      color: #221F1F;
+      font-family: 'IBM Plex Mono', monospace;
+      text-transform: uppercase;
+      font-size: 60px;
+      }
+
+#small {
+                color: #221F1F;
+            width: 18vw;
+               
+            }
+
+            #small:hover{
+              font-size: 60px;
+          text-decoration: overline;
+            }
+
+
+}
+
+
+.display {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 0.5em;
+}
+
+.HOVER {
+  --width: 100%;
+  --time: 0.3s;
+
+  position: relative;
+  display: inline-block;
+  height: -1em;
+  padding: 1em;
+
+  color: #222;
+  background: white;
+  overflow: hidden;
+}
+
+.HOVER text {
+  position: relative;
+  z-index: 5;
+  
+  transition: color var(--time);
+}
+
+.HOVER:hover text {
+  color: white;
+}
+
+.HOVER span {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 0;
+  width: 0;
+  height: 0;
+  
+  border-radius: 100%;
+  background: #222;
+  
+  transform: translate(-50%, -50%);
+  transition: width var(--time), padding-top var(--time);
+}
+
+.HOVER:hover span {
+  width: calc(var(--width) * 2.25);
+  padding-top: calc(var(--width) * 2.25);
+}
+
+.HOVER.FLASH:hover text {
+  color: white;
+}
+
+.HOVER.FLASH span {
+  background: #ff3b3b;
+}
+
+.animated {
+  --angle: 5deg;
+  animation: shake 0.3s;
+}
+
+.link{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  
+  font-size: 1rem;
+}
+
+
+</style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="application/ecmascript">
+
+  function translateText(inputText, trMatrix) {
+    var outputText = "";
+    for(var i=0; i<inputText.length; i++) {
+      outputText = outputText.concat( trMatrix[inputText[i]] );
+    }
+    return outputText;
+  }
+  
+  function initTrMatrix() {
+    var matrix = [];
+    for( var i=2; i<=255; i++ ) {
+      matrix[ String.fromCharCode(i) ] = String.fromCharCode(i);
+    }
+    return matrix;
+  }
+  
+  function doTranslate() {
+    $("#output").text(translateText($("#input").val(), translate));
+  }
+  
+  var translate = initTrMatrix();
+  translate["I"] = "1";
+  translate["b"] = "d";
+  translate["o"] = "e";
+  translate["c"] = "a";
+  translate["m"] = "w";
+  translate["q"] = "p";
+  translate["g"] = "9";
+  translate["E"] = "3";
+  translate["S"] = "5";
+  translate["f"] = "t";
+   translate["n"] = "h";
+ translate["l"] = "I";
+function translateText2(inputText, trMatrix) {
+    var outputText = "";
+    for(var i=0; i<inputText.length; i++) {
+      outputText = outputText.concat( trMatrix[inputText[i]] );
+    }
+    return outputText;
+  }
+  
+  function initTrMatrix2() {
+    var matrix = [];
+    for( var i=2; i<=255; i++ ) {
+      matrix[ String.fromCharCode(i) ] = String.fromCharCode(i);
+    }
+    return matrix;
+  }
+  
+  function doTranslate2() {
+    $("#output2").text(translateText2($("#output").val(), translate2));
+  }
+  
+  var translate2 = initTrMatrix2();
+  translate2["b"] = "d";
+  translate2["d"] = "b";
+  translate2["e"] = "c";
+  translate2["c"] = "o";
+  translate2["o"] = "e";
+  translate2["u"] = "n";
+  translate2["p"] = "q";
+  translate2["g"] = "p";
+  translate2["E"] = "3";
+  translate2["S"] = "5";
+  translate2["f"] = "t";
+  translate2["i"] = "j";
+  translate2["9"] = "g";
+  translate2["I"] = "1";
+;
+
+  function translateText3(inputText, trMatrix) {
+    var outputText = "";
+    for(var i=0; i<inputText.length; i++) {
+      outputText = outputText.concat( trMatrix[inputText[i]] );
+    }
+    return outputText;
+  }
+  
+  function initTrMatrix3() {
+    var matrix = [];
+    for( var i=2; i<=255; i++ ) {
+      matrix[ String.fromCharCode(i) ] = String.fromCharCode(i);
+    }
+    return matrix;
+  }
+  
+  function doTranslate3() {
+    $("#output3").text(translateText3($("#output2").val(), translate3));
+  }
+  
+  var translate3 = initTrMatrix3();
+  translate3["b"] = "p";
+  translate3["j"] = "y";
+  translate3["a"] = "e";
+  translate3["e"] = "o";
+  translate3["3"] = "E";
+  translate3["5"] = "S";
+  translate3["s"] = "c";
+  translate3["R"] = "k";
+  translate3["w"] = "m";
+  translate3["v"] = "u";
+  translate3["n"] = "t";
+  translate3["j"] = "i";
+   translate3["c"] = "a";
+    translate3["1"] = "l";
+
+
+</script>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js.js"></script>
+  </head>
+<body>
+<section class="wrapper">
+  <div class="span-all">
+    <h1 class="title serif centre">Seeing the<br>the whole shape</h1>
+  <!--   <p class="sans centre summary">since .92</p> -->
+  </div>
+  <div class="span-third">
+    <p id="l1"><span id="as">Dose <br></span></p>
+<p id="l2"><span id="as">shud<br></span></p>
+<p id="l3"><span id="as">saw<br></span></p>
+<p id="l21"><span id="as">who<br></span></p>
+<p id="l4"><span id="as">littel<br></span></p>
+<p id="l5"><span id="as">where<br></span></p>
+<p id="l6"><span id="as">were<br></span></p>
+<p id="l7"><span id="as">now<br></span></p>
+<p id="l8"><span id="as">grad<br></span></p>
+    <!-- <p class="serif accent">Werke aus der Friedrich Christian Flick Collection im Hamburger Bahnhof, der Sammlung der Nationalgalerie und Leihgaben</p> -->
+    <p class="serif accent">I never could learn how to sound out words. So the way that I worked around this is to spell  by the shape of the word. This means that letters may all there but not in the right order or I replace simulaire looking letters that form the same shape.</p>
+   <!--  <p class="placeholder"> -->
+     <a class="HOVER">
+    <span></span>
+    <text>Dislexia
+
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Dislixai
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>dyslexu
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Dyslexa
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Dislexia
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Dyslexeia
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Dyslixia
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Dyslexia
+</text>
+  </a>
+
+<a class="HOVER">
+    <span></span>
+    <text>Dyselxai
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>dyslexa
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Dysleaxia
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Dyselxia
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>dyslexa
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Dyslexi
+</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Dyslexia</text>
+  </a>
+
+
+  <a class="HOVER">
+    <span></span>
+    <text>Opinion</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Opinon</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Opion</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>opinin</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>opinon</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>opininion</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Opinion</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Opinun</text>
+  </a>
+
+<a class="HOVER">
+    <span></span>
+    <text>Oppinion</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>opinnion</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>oppinun</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Opinimin</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Opintion</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Opinyun</text>
+  </a>
+  <a class="HOVER">
+    <span></span>
+    <text>Opinun</text>
+  </a>
+
+  </div>
+  <div class="span-twothirds">
+ <textarea id="input" rows="12" cols="60">Enter Text Here</textarea>
+
+<div class="multi-button">
+  <button onclick="doTranslate()">Frist</button>
+  <button onclick="doTranslate2()">Second</button>
+  <button onclick="doTranslate3()">Thrid</button>
+</div>
+      
+<textarea class="textarea" id="output" rows="15" cols="35"></textarea>
+
+
+<textarea id="output2" rows="15" cols="35"></textarea>
+
+
+<textarea id="output3" rows="15" cols="35"></textarea>
+
+</p>
+    <p class="sans summary justify"><div class="container">
+  <h1>The Edit</h1>
+  <p>
+    Tilda took the 
+    <span class="choice">
+      <sup>
+        barren 
+      </sup>
+      <sub>
+        baron 
+      </sub> 
+    </span>
+   landscape thorugh there visor.
+   Unease 
+    <span class="choice">
+      <sup>
+        knotted
+      </sup>
+      <sub>
+        knowed 
+      </sub> 
+    </span>
+    their gut they moved 
+    <span class="choice">
+      <sup>
+        through
+      </sup>
+      <sub>
+        thought
+      </sub>
+    </span> the abandoned settlement.   
+    They picked up a small bit of dirt and rubbed it between their
+    <span class="choice">
+      <sup>
+        figures.
+      </sup>
+      <sub>
+        fingers. 
+      </sub> 
+    </span>
+    Something was off about this. Jamming 
+  </p>
+
+  <p>
+    Much that once was...is lost.
+    <span class="choice">
+      <sup>
+       their 
+      </sup>
+      <sub>
+        there
+      </sub> 
+      <sub>
+        they're
+      </sub> 
+    </span>       
+    hand into their pocket they hoped find something work 
+    <span class="choice">
+      <sup>
+        which
+      </sup> 
+      <sub>
+        with
+      </sub>
+    </span>
+    but there was nothing in there but old napkin and some lint
+  </p>
+
+  <p>
+    Everything 
+    <span>
+      <sup>
+        Appeared
+      </sup>
+      <sub>
+        Apseared
+      </sub> 
+    </span>
+    to be normal at least far as any of the sensors could tell.
+    </p>
+    <p>
+    <span class="choice">
+      <sup>
+        Squinting
+      </sup>
+      <sub>
+        Squenting
+      </sub>
+    </span>
+   out through haze of heat and dust. 
+    <span>
+      <sup>
+        How
+      </sup>
+      <sub>
+        Who
+      </sub>
+    </span> 
+   ow on earth than was there a little town out here. 
+    More importanlty  
+    <span class="choice">
+      <sup>
+        where
+      </sup>
+      <sub>
+        were
+      </sub>
+    </span>.
+    was here.
+</div>
+  </div>
+  <div class="span-half">
+    <p class="fine-print justify sans">
+      <a id="small">Exicitng 
+<a id="small">exciting 
+<a id="small">expecting 
+<a id="small">exsciting 
+<a id="small">exsting
+<a id="small"> exsticting 
+<a id="small">exciting 
+<a id="small">exsiteing
+<a id="small"> excseitng 
+<a id="small">extited 
+<a id="small">existed 
+<a id="small">exspecialy 
+<a id="small">exspeccilay 
+<a id="small">exsepillay
+<a id="small"> exspeacilly 
+<a id="small">exspecialy 
+<a id="small">exspeicaly
+<a id="small"> exspeically
+<a id="small"> exsisting
+<a id="small"> exgisting
+<a id="small">retrant
+<a id="small">restraunt
+<a id="small">restuarnt 
+<a id="small">restraunt 
+<a id="small">restrant
+<a id="small">restrant
+<a id="small">restarant
+<a id="small">restrunt
+<a id="small">restarunt
+<a id="small">resturant
+<a id="small">restaunt
+<a id="small">restuarnt
+<a id="small">restaurnat
+<a id="small">restaurnt 
+<a id="small">resturnt
+<a id="small">restuarnt
+<a id="small">restrunt
+<a id="small">reasteraunt
+<a id="small">reasterant
+<a id="small">reasterunt
+<a id="small">reastaunt
+<a id="small">Reastaurant
+<a id="small">raesterant
+<a id="small">Raestaurant
+<a id="small">restereaunt
+<a id="small">reastraunt
+
+<a id="small">Broaccole
+<a id="small">Bracolee
+<a id="small">Braccolee
+<a id="small">Broacolee
+<a id="small">Bracholle
+<a id="small">Bracholie
+<a id="small">Bracholee
+<a id="small">Brachocoli
+<a id="small">Bracholie
+<a id="small">Briacholie
+<a id="small">Brochalie
+</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>
+
+  </div>
+  <div class="span-half">
+    <p class="fine-print justify sans">
+      <a id="quick">aestic
+          <a id="quick">aesthic
+            <a id="quick">aeustic
+              <a id="quick">aeustic
+              <a id="quick">aesitic
+              <a id="quick">aeusthic
+              <a id="quick">aestic
+              <a id="quick">aesithc
+              <a id="quick">austic
+              <a id="quick">aesthic
+              <a id="quick">aeustic
+              <a id="quick">aestic
+              <a id="quick">aesithic
+              <a id="quick">aesuthic
+              <a id="quick">aesutitc
+              <a id="quick">aesithic
+              <a id="quick">aesthic
+              <a id="quick">aestic
+              <a id="quick">aesthic
+              <a id="quick">aeustic
+              <a id="quick">aeustic
+              <a id="quick">aesitic
+              <a id="quick">aesithic
+              <a id="quick">aeusthic
+              <a id="quick">aestic
+              <a id="quick">aesithc
+              <a id="quick">austic
+              <a id="quick">aesthic
+              <a id="quick">aeustic
+              <a id="quick">aestic
+              <a id="quick">aesithic
+              <a id="quick">aesuthic
+              <a id="quick">aesutitc
+              <a id="quick">aesithic
+              <a id="quick">aesthic
+
+                        <a id="quick">Asome
+
+              <a id="quick">Awsum
+
+              <a id="quick">Asum
+
+
+              <a id="quick">awsoe
+
+              <a id="quick">awsime
+
+              <a id="quick">Awesome
+
+              <a id="quick">Awisum
+
+              <a id="quick">Aswsome
+
+              <a id="quick">Asum
+
+              <a id="quick">Asome
+    <a id="quick">austic
+              <a id="quick">Azwsome
+
+          
+              <a id="quick">Azsum
+
+              <a id="quick">Awsoom
+
+              <a id="quick">Aswsome
+              
+
+
+               </a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>
+ </p>
+  </div>
+  <div class="centre span-half">
+    <!-- <p class="placeholder"> --><ul class="list">
+  <li><a href="#0">| <span>Parallel</span></a></li>
+  <li><a href="#0">||<span>perallel</span></a></li>
+  <li><a href="#0">||| <span>Peralelel</span></a></li>
+  <li><a href="#0">||||<span>parellel</span></a></li>
+  <li><a href="#0">||||| <span>paralel</span></a></li>
+  <li><a href="#0">|||||| <span>Paralell</span></a></li>
+</ul> 
+<ul class="list">
+  <li><a href="#0">||||||| <span>paralelle</span></a></li>
+  <li><a href="#0">||||||||<span>Peralelle</span></a></li>
+  <li><a href="#0">||||||||| <span>Peralell</span></a></li>
+  <li><a href="#0">|||||||||| <span>Parelelle</span></a></li>
+  <li><a href="#0">||||||||||| <span>peralell</span></a></li>
+  <li><a href="#0">|||||||||||| <span>Parell</span></a></li>
+</ul> 
+
+  </div>
+  <div class="span-fourth serif summary">
+        <p id="l9"><span id="as">wold<br></span></p>
+<p id="l10"><span id="as">frinds<br></span></p>
+<p id="l11"><span id="as">grils<br></span></p>
+<p id="l12"><span id="as">saed <br></span></p>
+<p id="l13"><span id="as">wus<br></span></p>
+<p id="l14"><span id="as">fel<br></span></p>
+
+  </div>
+  <div class="serif summary line-left span-fourth"><p id="l15"><span id="as">becaus<br></span></p>
+<p id="l16"><span id="as">hose<br></span></p>
+<p id="l17"><span id="as">gust<br></span></p>
+<p id="l18"><span id="as">adout<br></span></p>
+<p id="l19"><span id="as">stoire<br></span></p>
+<p id="l20"><span id="as">ainmalls<br></span></p>
+    
+<!--   </div>
+  <div class="summary span-fourth sans">
+    <p>Mit Arbeiten von/<br> With works from:</p>
+    <p>Joseph Albers<br> Carl Andre<br> Bernd und/and Hilla Becher<br> Lee Bontecou<br> George Brecht<br> John Chamberlain</p>
+  </div>
+  <div class="line-left summary span-fourth sans">
+    <p>Hanne Darboven<br> Dan Flavin<br> Isa Genzken<br> Jenny Holzer<br> Richard Jackson<br> Allan Kaprow<br> Manfred Kuttner<br> Barbara Kruger<br> Louise Lawler</p>
+  </div>
+  <div class="line-left span-fourth summary sans">
+    <p>Sol LeWitt<br> Konrad Lueg<br> Walter De Maria<br> Paul McCarthy<br> Robert Morris<br> Bruce Nauman
+      <br>
+        Claes Oldenburg<br> Sigmar Polke<br> Charlotte Posenenske<br> Jason Rhoades</p>
+  </div>
+  <div class="line-left span-fourth summary sans">
+    <p>Gerhard Richter<br> George Segal<br> Tony Smith<br> Robert Smithson<br> Frank Stella<br> Wolfgang Tillmans<br> Rirkrit Tiravanija<br> Rosemarie Trockel<br> Lawrence Weiner</p>
+  </div>
+
+  <div class="span-threefourths sans summary justify">
+    <h1>The Edit</h1>
+  <p>
+    Tilda took the 
+    <span class="choice">
+      <sup>
+        barren 
+      </sup>
+      <sub>
+        baron 
+      </sub> 
+    </span>
+   landscape thorugh there visor.
+   Unease 
+    <span class="choice">
+      <sup>
+        knotted
+      </sup>
+      <sub>
+        knowed 
+      </sub> 
+    </span>
+    their gut they moved 
+    <span class="choice">
+      <sup>
+        through
+      </sup>
+      <sub>
+        thought
+      </sub>
+    </span> the abandoned settlement.   
+    They picked up a small bit of dirt and rubbed it between their
+    <span class="choice">
+      <sup>
+        figures.
+      </sup>
+      <sub>
+        fingers. 
+      </sub> 
+    </span>
+    Something was off about this. Jamming 
+  </p>
+
+  <p>
+    Much that once was...is lost.
+    <span class="choice">
+      <sup>
+       their 
+      </sup>
+      <sub>
+        there
+      </sub> 
+      <sub>
+        they're
+      </sub> 
+    </span>       
+    hand into their pocket they hoped find something work 
+    <span class="choice">
+      <sup>
+        which
+      </sup> 
+      <sub>
+        with
+      </sub>
+    </span>
+    but there was nothing in there but old napkin and some lint
+  </p>
+
+  <p>
+    Everything 
+    <span>
+      <sup>
+        Appeared
+      </sup>
+      <sub>
+        Apseared
+      </sub> 
+    </span>
+    to be normal at least far as any of the sensors could tell.
+    </p>
+    <p>
+    <span class="choice">
+      <sup>
+        Squinting
+      </sup>
+      <sub>
+        Squenting
+      </sub>
+    </span>
+   out through haze of heat and dust. 
+    <span>
+      <sup>
+        How
+      </sup>
+      <sub>
+        Who
+      </sub>
+    </span> 
+   ow on earth than was there a little town out here. 
+    More importanlty  
+    <span class="choice">
+      <sup>
+        where
+      </sup>
+      <sub>
+        were
+      </sub>
+    </span>.
+    was here.
+</div>
+  </div>
+  </div>
+  <div class="span-fourth">
+    <p class="placeholder">placeholder</p>
+
+
+  </div>
+
+  <div class="span-third">
+    <p class="sans">
+      Nationalgalerie im Hamburger Bahnhof &ndash; Museum f&uuml;r Gegenwart &ndash; Berlin</p>
+  </div>
+  <div class="line-left span-third">
+    <p class="sans">
+      Invalidenstraße 50-51<br/> 10557 Berlin</p>
+    <p class="sans">
+      www.smb.museum/hbf
+    </p>
+  </div>
+  <div class="line-left span-third">
+    <p class="sans fine-print">
+      Offnungszeiten/Opening hours<br/> Di, Mi, Fr/Tu, Wed, Fri 10-18<br/> Do/Thu 10-20<br/> Sa, So/Sat, Sun 11-19</p>
+  </div>
+ -->
+ 
+</section>>
+      </body>
+</html>
